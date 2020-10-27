@@ -5,7 +5,7 @@ module Spree
     end
 
     def current_order_params
-      { currency: current_currency, token: cookies.signed[:token], store_id: current_store.id }
+      { currency: current_currency, token: cookies.signed[:user_token], store_id: current_store.id }
     end
   end
 end
